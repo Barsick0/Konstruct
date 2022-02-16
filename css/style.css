@@ -19,23 +19,27 @@ body{
 }
 
 .header{
-    background-image: url(../images/bg.png);
+    background-image: url(../images/bg.jpg);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-position: top;
     margin: 0 auto;
+    height: 100vh;
 }
 
 .header__content{
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .header__logo{
     margin-top: 41px;
 }
 
-.header__text{
-    margin-top: 285px;
+.header__title{
     font-family: 'Bebas Neue';
     font-size: 60px;
     line-height: 70px;
@@ -54,12 +58,10 @@ body{
 /****************** СТРЕЛКА ВНИЗ *******************/
 
 .header__arrow {
-  position: relative;
-  width: 24px;
-  height: 24px;
-  padding-top: 240px;
-  padding-bottom: 85px;
-  margin: 0 auto;
+    width: 24px;
+    height: 24px;
+    margin: 0 auto;
+    padding-bottom: 85px;
 }
 
 .chevron {
@@ -122,8 +124,10 @@ body{
 .header__arrow-text {
   display: inline-block;
   position: absolute;
-  left: -180%;
+  left: 0;
+  right: 0;
   bottom: 90px;
+  margin: 0 auto;
   text-transform: uppercase;
   white-space: nowrap;
   opacity: 1;
@@ -143,6 +147,11 @@ body{
 
 /****************************** СТРЕЛКА ВНИЗ END ******************************/
 
+.nav{
+    border-top: 1px solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
+}
+
 .container{
     max-width: 950px;
     padding: 0 10px;
@@ -154,14 +163,6 @@ body{
     justify-content: space-between;
     padding-top: 23px;
     padding-bottom: 23px;
-}
-
-.menu__border-top{
-    border-top: 1px solid #E6E6E6;
-}
-
-.menu__border-bottom{
-    border-bottom: 1px solid #E6E6E6;
 }
 
 .menu__list{
@@ -644,9 +645,6 @@ body{
 
 
 @media (max-width:1440px){
-    .header{
-        background-size: auto;
-    }
     .build{
         background-size: auto;
     }
